@@ -1,0 +1,44 @@
+{
+  "user-consent": {
+    "permissive": {
+      "dpv:hasPersonalData": "dpv:PersonalDataCategory",
+      "dpv:hasProcessing": "dpv:Processing",
+      "dpv:hasPurpose": "dpv:Purpose",
+      "dpv:hasRecipient": "dpv:Recipient",
+      "dpv:hasLocation": "dpv:Location",
+      "dpv:hasExpiryTime": "2099-12-31T23:59:59"
+    },
+    "with-array": {
+      "dpv:hasPersonalData": "dpv:PersonalDataCategory",
+      "dpv:hasProcessing": "dpv:Processing",
+      "dpv:hasPurpose": [
+        "dpv:AcademicResearch",
+        "dpv:Advertising"
+      ],
+      "dpv:hasLocation": "dpv:Location",
+      "dpv:hasRecipient": "dpv:Recipient",
+      "dpv:hasExpiryTime": "2023-01-05T23:59:59"
+    }
+  },
+  "data-handling": {
+    "permissive": {
+      "dpv:hasPersonalData": "dpv:PersonalDataCategory",
+      "dpv:hasProcessing": "dpv:Processing",
+      "dpv:hasPurpose": "dpv:Purpose",
+      "dpv:hasRecipient": "dpv:Recipient",
+      "dpv:hasLocation": "dpv:Location",
+      "dpv:hasExpiryTime": "2099-12-31T23:59:59"
+    },
+    "with-array": {
+      "dpv:hasPersonalData": "dpv:PersonalDataCategory",
+      "dpv:hasProcessing": "dpv:Processing",
+      "dpv:hasPurpose": [
+        "dpv:AcademicResearch",
+        "dpv:Advertising"
+      ],
+      "dpv:hasLocation": "dpv:Location",
+      "dpv:hasRecipient": "dpv:Recipient",
+      "dpv:hasExpiryTime": "2023-01-05T23:59:59"
+    }
+  }
+}

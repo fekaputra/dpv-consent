@@ -1,0 +1,1551 @@
+@prefix :         <http://w3id.org/wellfort/ns/dpv#> .
+@prefix svd:      <http://www.specialprivacy.eu/vocabs/data#> .
+@prefix sw:       <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dpv:      <http://www.w3.org/ns/dpv#> .
+@prefix spl:      <http://www.specialprivacy.eu/langs/usage-policy#> .
+@prefix svpr:     <http://www.specialprivacy.eu/vocabs/processing#> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml:      <http://www.w3.org/XML/1998/namespace> .
+@prefix dpv-gdpr: <http://www.w3.org/ns/dpv-gdpr#> .
+@prefix bibo:     <http://purl.org/ontology/bibo/> .
+@prefix time:     <http://www.w3.org/2006/time#> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+@prefix svpu:     <http://www.specialprivacy.eu/vocabs/purposes#> .
+@prefix status:   <http://purl.org/ontology/bibo/status/> .
+@prefix id:       <http://w3id.org/wellfort/id/> .
+@prefix wfm:      <http://w3id.org/wellfort/ns/metadata#> .
+
+dpv:SocialNetwork
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Social .
+
+dpv:PurchasesAndSpendingHabit
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transactional .
+
+:CRP
+    a               owl:Class ;
+    rdfs:label      "C-Reactive Protein" ;
+    rdfs:subClassOf :Inflammation .
+
+:FOL
+    a               owl:Class ;
+    rdfs:label      "Folate" ;
+    rdfs:subClassOf :Vitamins .
+
+:DBIL
+    a               owl:Class ;
+    rdfs:label      "Direct Bilirubin" ;
+    rdfs:subClassOf :Liver .
+
+:CBC
+    a               owl:Class ;
+    rdfs:label      "CBC" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:AcademicResearch
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ResearchAndDevelopment .
+
+dpv-gdpr:A9-2-a
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:Sale
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transactional .
+
+:HGB
+    a               owl:Class ;
+    rdfs:label      "Hemoglobin" ;
+    rdfs:subClassOf :CBC .
+
+dct:created
+    a owl:AnnotationProperty .
+
+dpv:CreditScore
+    a               owl:Class ;
+    rdfs:subClassOf dpv:CreditWorthiness .
+
+dpv:Relationship
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Family .
+
+dpv:Weight
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PhysicalCharacteristic .
+
+dpv:Location
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Tracking .
+
+dpv-gdpr:A6-1-f
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:Copy
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Processing .
+
+dpv:SellInsightsFromData
+    a               owl:Class ;
+    rdfs:subClassOf dpv:CommercialInterest .
+
+dpv:ServiceProvision
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Purpose .
+
+:VIT-B12
+    a               owl:Class ;
+    rdfs:label      "Vitamin B12" ;
+    rdfs:subClassOf :Vitamins .
+
+dpv:Interaction
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PublicLife .
+
+:BUN
+    a               owl:Class ;
+    rdfs:label      "Blood Urea Nitrogen" ;
+    rdfs:subClassOf :Kidney .
+
+dpv:SpecialCategoryPersonalData
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PersonalDataCategory .
+
+dct:description
+    a owl:AnnotationProperty .
+
+dpv:Anonymise
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transform .
+
+dpv:SocialMediaMarketing
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Marketing .
+
+dpv:Job
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+dpv:CriminalPardon
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Criminal .
+
+:TIBC
+    a               owl:Class ;
+    rdfs:label      "Total Iron Binding Capacity" ;
+    rdfs:subClassOf :IronProfile .
+
+dpv:Adapt
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transform .
+
+:SBAResearch
+    rdfs:subClassOf :ResearchOrganization .
+
+dpv:CommercialResearch
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ResearchAndDevelopment .
+
+dpv:Child
+    a               owl:Class ;
+    rdfs:subClassOf dpv:DataSubject .
+
+dpv:Parent
+    a               owl:Class ;
+    rdfs:subClassOf dpv:FamilyStructure .
+
+dpv:RoomNumber
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Location .
+
+dpv:Recipient
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalEntity .
+
+dpv:Marriage
+    a               owl:Class ;
+    rdfs:subClassOf dpv:FamilyStructure .
+
+dpv:SellProductsToDataSubject
+    a               owl:Class ;
+    rdfs:subClassOf dpv:CommercialInterest .
+
+dpv:Security
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Purpose .
+
+dpv:DisciplinaryAction
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+dpv-gdpr:A9-2-g
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:PhysicalCharacteristic
+    a               owl:Class ;
+    rdfs:subClassOf dpv:External .
+
+dpv:Retina
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Biometric .
+
+dpv:Share
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Disclose .
+
+dpv:Profiling
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Use .
+
+dpv:KnowledgeBelief
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Internal .
+
+dpv-gdpr:A6-1-a-non-explicit-consent
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:Alter
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transform .
+
+:IronProfile
+    a               owl:Class ;
+    rdfs:label      "Iron Profile" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:PersonalDataHandling
+    a owl:Class .
+
+dpv:Payment
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServiceProvision .
+
+dpv:NonCommercialResearch
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ResearchAndDevelopment .
+
+dpv:Age
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PhysicalCharacteristic .
+
+dpv:PseudoAnonymise
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transform .
+
+dpv:External
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PersonalDataCategory .
+
+:Hormones
+    a               owl:Class ;
+    rdfs:label      "Hormones" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:Acquantaince
+    a               owl:Class ;
+    rdfs:subClassOf dpv:SocialNetwork .
+
+dpv:ServiceConsumptionBehavior
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Behavioral .
+
+:NA
+    a               owl:Class ;
+    rdfs:label      "Sodium" ;
+    rdfs:subClassOf :Minerals_Electrolytes .
+
+dpv:DataProcessor
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Recipient .
+
+:LDL
+    a               owl:Class ;
+    rdfs:label      "Low-Density Lipoprotein Cholesterol" ;
+    rdfs:subClassOf :Lipids .
+
+dpv:TelephoneNumber
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Contact .
+
+dpv:Transaction
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transactional .
+
+dpv:CriminalConviction
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Criminal .
+
+dpv:CreditStanding
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Credit .
+
+dpv:VulnerableDataSubject
+    a               owl:Class ;
+    rdfs:subClassOf dpv:DataSubject .
+
+dpv:MACAddress
+    a               owl:Class ;
+    rdfs:subClassOf dpv:DeviceBased .
+
+dpv:Transform
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Processing .
+
+dpv:DeviceSoftware
+    a               owl:Class ;
+    rdfs:subClassOf dpv:DeviceBased .
+
+dpv:AuthenticationHistory
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Behavioral .
+
+dpv:CriminalCharge
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Criminal .
+
+:ESR
+    a               owl:Class ;
+    rdfs:label      "Erythrocyte Sedimentation Rate" ;
+    rdfs:subClassOf :Inflammation .
+
+dpv:ProfessionalInterview
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+dpv:BloodType
+    a               owl:Class ;
+    rdfs:subClassOf dpv:MedicalHealth .
+
+dpv:Retrieve
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Use .
+
+xsd:date
+    a rdfs:Datatype .
+
+dpv:hasDataSubject
+    a           owl:ObjectProperty ;
+    rdfs:domain dpv:Consent ;
+    rdfs:range  dpv:DataSubject .
+
+dpv:LinkClicked
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Behavioral .
+
+dpv-gdpr:A9-2-b
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:UsageAnalytics
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServiceProvision .
+
+dpv:CreateEventRecommendations
+    a               owl:Class ;
+    rdfs:subClassOf dpv:CreatePersonalizedRecommendations .
+
+dpv:Purpose
+    a owl:Class .
+
+dpv:Erase
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Remove .
+
+dpv:SellTargettedAdvertisements
+    a               owl:Class ;
+    rdfs:subClassOf dpv:CommercialInterest .
+
+dpv:SecretText
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Authenticating .
+
+dct:creator
+    a owl:AnnotationProperty .
+
+dpv:Race
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Ethnicity, dpv:SpecialCategoryPersonalData .
+
+dpv:OptimisationForConsumer
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServiceOptimization .
+
+dpv:Social
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PersonalDataCategory .
+
+dpv:Store
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Processing .
+
+:PLT
+    a               owl:Class ;
+    rdfs:label      "Platelets" ;
+    rdfs:subClassOf :CBC .
+
+dpv:CallLog
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Behavioral .
+
+:TG
+    a               owl:Class ;
+    rdfs:label      "Triglycerides" ;
+    rdfs:subClassOf :Lipids .
+
+dpv:IncomeBracket
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Demographic .
+
+:Ubiquitous
+    a               owl:Class ;
+    rdfs:label      "Ubiquitous" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:Prescription
+    a               owl:Class ;
+    rdfs:subClassOf dpv:MedicalHealth .
+
+:HBA1C
+    a               owl:Class ;
+    rdfs:label      "Glycated Hemoglobin" ;
+    rdfs:subClassOf :BloodGlucose .
+
+:AST
+    a               owl:Class ;
+    rdfs:label      "Aspartate Aminotransferase" ;
+    rdfs:subClassOf :Liver .
+
+dpv:CommercialInterest
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Purpose .
+
+dpv:Gender
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PhysicalCharacteristic .
+
+:CA-CORR
+    a               owl:Class ;
+    rdfs:label      "Corrected Calcium" ;
+    rdfs:subClassOf :Minerals_Electrolytes .
+
+dpv:Username
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Identifying .
+
+:ResearchOrganization
+    rdfs:subClassOf dpv:DataProcessor .
+
+dpv:SexualHistory
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Sexual .
+
+dpv:Consult
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Use .
+
+dpv:SocialMediaCommunication
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Communication .
+
+sw:term_status
+    a owl:AnnotationProperty .
+
+dpv:Professional
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Social .
+
+dpv:Sibling
+    a               owl:Class ;
+    rdfs:subClassOf dpv:FamilyStructure .
+
+dpv:Marketing
+    a               owl:Class ;
+    rdfs:subClassOf dpv:CommercialInterest .
+
+:LYM
+    a               owl:Class ;
+    rdfs:label      "Lymphocytes" ;
+    rdfs:subClassOf :CBC .
+
+dpv:Language
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Ethnicity .
+
+dpv:ResearchAndDevelopment
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Purpose .
+
+dpv-gdpr:A9-2-h
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:Purchase
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transactional .
+
+dpv:Credit
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transactional .
+
+dpv-gdpr:A6-1-b
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:Ownership
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Financial .
+
+dpv:ServiceOptimization
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Purpose .
+
+dpv:Processing
+    a owl:Class .
+
+dpv:Personality
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Behavioral .
+
+dpv:Ethnicity
+    a               owl:Class ;
+    rdfs:subClassOf dpv:External .
+
+dpv:Height
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PhysicalCharacteristic .
+
+dpv:DNACode
+    a               owl:Class ;
+    rdfs:subClassOf dpv:MedicalHealth .
+
+dpv:Character
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PublicLife .
+
+:ALB
+    a               owl:Class ;
+    rdfs:label      "Albumin" ;
+    rdfs:subClassOf :Proteins .
+
+dpv:hasDataController
+    a           owl:ObjectProperty ;
+    rdfs:domain [ a           owl:Class ;
+                  owl:unionOf ( dpv:Consent dpv:PersonalDataHandling ) ] ;
+    rdfs:range  dpv:DataController .
+
+dpv:IPAddress
+    a               owl:Class ;
+    rdfs:subClassOf dpv:DeviceBased .
+
+dpv:Accent
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Language .
+
+dpv:CreditCardNumber
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PaymentCardNumber .
+
+dpv:ReligiousBelief
+    a               owl:Class ;
+    rdfs:subClassOf dpv:KnowledgeBelief, dpv:SpecialCategoryPersonalData .
+
+:Kidney
+    a               owl:Class ;
+    rdfs:label      "Kidney" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+:PTH
+    a               owl:Class ;
+    rdfs:label      "Parathyroid Hormone" ;
+    rdfs:subClassOf :Hormones .
+
+dpv:CustomerCare
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServiceProvision .
+
+dpv:OptimiseUserInterface
+    a               owl:Class ;
+    rdfs:subClassOf dpv:OptimisationForConsumer .
+
+:TBIL
+    a               owl:Class ;
+    rdfs:label      "Total Bilirubin" ;
+    rdfs:subClassOf :Liver .
+
+:TCH
+    a               owl:Class ;
+    rdfs:label      "Total Cholesterol" ;
+    rdfs:subClassOf :Lipids .
+
+dpv:CommunicationForCustomerCare
+    a               owl:Class ;
+    rdfs:subClassOf dpv:CustomerCare .
+
+dpv:CreatePersonalizedRecommendations
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServicePersonalization .
+
+dpv:FinancialAccount
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Financial .
+
+:P
+    a               owl:Class ;
+    rdfs:label      "Phosphorus" ;
+    rdfs:subClassOf :Minerals_Electrolytes .
+
+dpv:Disseminate
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Disclose .
+
+dpv:Authenticating
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Internal .
+
+:DataProcessingCompany
+    rdfs:subClassOf dpv:DataProcessor .
+
+dpv:Religion
+    a               owl:Class ;
+    rdfs:subClassOf dpv:SpecialCategoryPersonalData, dpv:PublicLife .
+
+dpv-gdpr:A9-2-c
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+:Liver
+    a               owl:Class ;
+    rdfs:label      "Liver" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:PoliticalAffiliation
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PublicLife, dpv:SpecialCategoryPersonalData .
+
+dpv:Picture
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Identifying .
+
+dpv:EmploymentHistory
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+dpv:DeliveryOfGoods
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServiceProvision .
+
+dpv:Consent
+    a owl:Class .
+
+dpv:Align
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transform .
+
+dpv:LegalCompliance
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Purpose .
+
+dpv:Demeanor
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Behavioral .
+
+prov:Agent
+    a owl:Class .
+
+dpv:ThirdParty
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Recipient .
+
+dpv:Transfer
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Processing .
+
+dpv:Health
+    a               owl:Class ;
+    rdfs:subClassOf dpv:MedicalHealth .
+
+:LDH
+    a               owl:Class ;
+    rdfs:label      "Lactate Dehydrogenase" ;
+    rdfs:subClassOf :Ubiquitous .
+
+dpv:CreditCapacity
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Credit .
+
+:Inflammation
+    a               owl:Class ;
+    rdfs:label      "Inflammation" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:hasRecipient
+    a           owl:ObjectProperty ;
+    rdfs:domain [ a           owl:Class ;
+                  owl:unionOf ( dpv:Consent dpv:PersonalDataHandling ) ] ;
+    rdfs:range  dpv:Recipient .
+
+dpv:PublicLife
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Social .
+
+dpv:Fetish
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Sexual .
+
+dpv:EmailAddress
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Contact .
+
+:Cardiac
+    a               owl:Class ;
+    rdfs:label      "Cardiac" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+:FERR
+    a               owl:Class ;
+    rdfs:label      "Ferritin" ;
+    rdfs:subClassOf :IronProfile .
+
+dpv:EmailContent
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Communication .
+
+dpv:HouseOwned
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Ownership .
+
+dpv:IndividualHealthHistory
+    a               owl:Class ;
+    rdfs:subClassOf dpv:HealthHistory .
+
+dpv:DeviceOperatingSystem
+    a               owl:Class ;
+    rdfs:subClassOf dpv:DeviceSoftware .
+
+dpv:Transmit
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Disclose .
+
+dpv:AccessControl
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Security .
+
+dpv:Organise
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Processing .
+
+:K
+    a               owl:Class ;
+    rdfs:label      "Potassium" ;
+    rdfs:subClassOf :Minerals_Electrolytes .
+
+dpv:CommunicationsMetadata
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PublicLife .
+
+:FBG
+    a               owl:Class ;
+    rdfs:label      "Fasting Blood Glucose" ;
+    rdfs:subClassOf :BloodGlucose .
+
+dpv:OptimisationForController
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServiceOptimization .
+
+dpv-gdpr:A9-2-i
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:DiscloseByTransmission
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Disclose .
+
+dpv:Geographic
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Demographic .
+
+dpv:hasPurpose
+    a           owl:ObjectProperty ;
+    rdfs:domain [ a           owl:Class ;
+                  owl:unionOf ( dpv:Consent dpv:PersonalDataHandling ) ] ;
+    rdfs:range  dpv:Purpose .
+
+dpv-gdpr:A6-1-c
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:Password
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Authenticating .
+
+dpv:SellDataToThirdParties
+    a               owl:Class ;
+    rdfs:subClassOf dpv:CommercialInterest .
+
+dpv:HairColor
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PhysicalCharacteristic .
+
+dpv:IncreaseServiceRobustness
+    a               owl:Class ;
+    rdfs:subClassOf dpv:OptimisationForController .
+
+:WC
+    a               owl:Class ;
+    rdfs:label      "WC" ;
+    rdfs:subClassOf :Custom .
+
+dpv:GroupMembership
+    a               owl:Class ;
+    rdfs:subClassOf dpv:SocialNetwork .
+
+dpv:DrugTestResult
+    a               owl:Class ;
+    rdfs:subClassOf dpv:MedicalHealth .
+
+:WBC
+    a               owl:Class ;
+    rdfs:label      "White Blood Cells" ;
+    rdfs:subClassOf :CBC .
+
+dpv:Historical
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PersonalDataCategory .
+
+dpv:Divorce
+    a               owl:Class ;
+    rdfs:subClassOf dpv:FamilyStructure .
+
+dpv:DeviceApplications
+    a               owl:Class ;
+    rdfs:subClassOf dpv:DeviceSoftware .
+
+dpv:InternalResourceOptimisation
+    a               owl:Class ;
+    rdfs:subClassOf dpv:OptimisationForController .
+
+dpv:SexualPreference
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Sexual .
+
+dpv:Demographic
+    a               owl:Class ;
+    rdfs:subClassOf dpv:External .
+
+:Custom
+    a               owl:Class ;
+    rdfs:label      "Custom" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:PhysicalAddress
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Contact .
+
+dpv:MaritalStatus
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PublicLife .
+
+dpv:ServicePersonalization
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Purpose .
+
+dpv:Internal
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PersonalDataCategory .
+
+dpv:Move
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transfer .
+
+dpv:VoiceMail
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Communication .
+
+dpv:ApartmentOwned
+    a               owl:Class ;
+    rdfs:subClassOf dpv:HouseOwned .
+
+dct:date-accepted
+    a owl:AnnotationProperty .
+
+dpv:BrowserFingerprint
+    a               owl:Class ;
+    rdfs:subClassOf dpv:DeviceBased .
+
+dpv:Tax
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transactional .
+
+dpv:Obtain
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Processing .
+
+dpv-gdpr:A9-2-d
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:CreateProductRecommendations
+    a               owl:Class ;
+    rdfs:subClassOf dpv:CreatePersonalizedRecommendations .
+
+:HCY
+    a               owl:Class ;
+    rdfs:label      "Homocysteine" ;
+    rdfs:subClassOf :Cardiac .
+
+dpv:PersonalPossession
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Ownership .
+
+dpv:DataSubject
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalEntity .
+
+:FE
+    a               owl:Class ;
+    rdfs:label      "Serum Iron" ;
+    rdfs:subClassOf :IronProfile .
+
+dpv:hasProcessing
+    a           owl:ObjectProperty ;
+    rdfs:domain [ a           owl:Class ;
+                  owl:unionOf ( dpv:Consent dpv:PersonalDataHandling ) ] ;
+    rdfs:range  dpv:Processing .
+
+:MG
+    a               owl:Class ;
+    rdfs:label      "Magnesium" ;
+    rdfs:subClassOf :Minerals_Electrolytes .
+
+dpv:Opinion
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Preference .
+
+dpv:Criminal
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Social .
+
+dpv:Name
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Identifying .
+
+:CompanyHB
+    rdfs:subClassOf :DataProcessingCompany .
+
+dpv:Offspring
+    a               owl:Class ;
+    rdfs:subClassOf dpv:FamilyStructure .
+
+dpv:DeviceBased
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Tracking .
+
+dpv:MakeAvailable
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Disclose .
+
+dpv:Use
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Processing .
+
+:ALT
+    a               owl:Class ;
+    rdfs:label      "Alanine Aminotransferase" ;
+    rdfs:subClassOf :Liver .
+
+dpv:Record
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Obtain .
+
+:NEU
+    a               owl:Class ;
+    rdfs:label      "Neutrophils" ;
+    rdfs:subClassOf :CBC .
+
+dpv:Contact
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Tracking .
+
+dpv:expiryTime
+    a           owl:DatatypeProperty ;
+    rdfs:domain [ a           owl:Class ;
+                  owl:unionOf ( dpv:Consent dpv:PersonalDataHandling ) ] ;
+    rdfs:range  xsd:dateTime .
+
+:Thyroid
+    a               owl:Class ;
+    rdfs:label      "Thyroid" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv-gdpr:A6-1-a-explicit-consent
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:ImproveInternalCRMProcesses
+    a               owl:Class ;
+    rdfs:subClassOf dpv:OptimisationForController .
+
+dpv:SocialStatus
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PublicLife .
+
+dpv:Remove
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Processing .
+
+dpv:Dislike
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Interest .
+
+dpv:Restrict
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transform .
+
+:RBC
+    a               owl:Class ;
+    rdfs:label      "Red Blood Cells" ;
+    rdfs:subClassOf :CBC .
+
+dpv:FavoriteColor
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Favorite .
+
+:CKMBRI
+    a               owl:Class ;
+    rdfs:label      "CKMB Relative Index" ;
+    rdfs:subClassOf :Cardiac .
+
+dpv:Structure
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Organise .
+
+dpv:ProfessionalEvaluation
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+:HCT
+    a               owl:Class ;
+    rdfs:label      "Hematocrit" ;
+    rdfs:subClassOf :CBC .
+
+dpv:Collect
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Obtain .
+
+dpv-gdpr:A9-2-j
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+:VIT-D
+    a               owl:Class ;
+    rdfs:label      "Vitamin D" ;
+    rdfs:subClassOf :Vitamins .
+
+dpv:FavoriteMusic
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Favorite .
+
+dpv-gdpr:A6-1-d
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:Preference
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Internal .
+
+:BloodGlucose
+    a               owl:Class ;
+    rdfs:label      "Blood Glucose" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+:CK
+    a               owl:Class ;
+    rdfs:label      "Creatine Kinase" ;
+    rdfs:subClassOf :Cardiac .
+
+dpv:Proclivitie
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Sexual .
+
+dpv:Thought
+    a               owl:Class ;
+    rdfs:subClassOf dpv:KnowledgeBelief .
+
+dpv:UID
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Identifying .
+
+dpv:Biometric
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Identifying, dpv:SpecialCategoryPersonalData .
+
+:EOS
+    a               owl:Class ;
+    rdfs:label      "Eosinophils" ;
+    rdfs:subClassOf :CBC .
+
+:MONO
+    a               owl:Class ;
+    rdfs:label      "Monocytes" ;
+    rdfs:subClassOf :CBC .
+
+dpv:MentalHealth
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Health .
+
+dpv:FavoriteFood
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Favorite .
+
+dpv:MedicalHealth
+    a               owl:Class ;
+    rdfs:subClassOf dpv:External, dpv:SpecialCategoryPersonalData .
+
+dpv:HealthRecord
+    a               owl:Class ;
+    rdfs:subClassOf dpv:MedicalHealth .
+
+dpv:PersonalisedBenefits
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServicePersonalization .
+
+dpv:GPSCoordinate
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Location .
+
+dpv:Destruct
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Remove .
+
+dpv:Sexual
+    a               owl:Class ;
+    rdfs:subClassOf dpv:SpecialCategoryPersonalData, dpv:External .
+
+dpv:Association
+    a               owl:Class ;
+    rdfs:subClassOf dpv:SocialNetwork .
+
+dpv:GeneralReputation
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PublicLife .
+
+dpv:HealthHistory
+    a               owl:Class ;
+    rdfs:subClassOf dpv:MedicalHealth .
+
+dpv:DirectMarketing
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Marketing .
+
+dpv-gdpr:A9-2-e
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:CreditRecord
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Credit .
+
+:FT3
+    a               owl:Class ;
+    rdfs:label      "Free Triiodothyronine" ;
+    rdfs:subClassOf :Thyroid .
+
+dpv:WorkHistory
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+dpv:LoanRecord
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transactional .
+
+:GLB
+    a               owl:Class ;
+    rdfs:label      "Globulin" ;
+    rdfs:subClassOf :Proteins .
+
+:TUWien
+    rdfs:subClassOf :ResearchOrganization .
+
+dpv:PINCode
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Authenticating .
+
+dpv:CarOwned
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Ownership .
+
+dpv:School
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+dpv:Interest
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Preference .
+
+dpv:Behavioral
+    a               owl:Class ;
+    rdfs:subClassOf dpv:External .
+
+dpv:PaymentCardNumber
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PaymentCard, dpv:AccountIdentifier .
+
+:CompanyM
+    rdfs:subClassOf :DataProcessingCompany .
+
+dpv:hasPersonalDataCategory
+    a           owl:ObjectProperty ;
+    rdfs:domain [ a           owl:Class ;
+                  owl:unionOf ( dpv:Consent dpv:PersonalDataHandling ) ] ;
+    rdfs:range  dpv:PersonalDataCategory .
+
+dpv:Advertising
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Marketing .
+
+dpv:FraudPreventionAndDetection
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Security .
+
+:TTST
+    a               owl:Class ;
+    rdfs:label      "Total Testosterone" ;
+    rdfs:subClassOf :Hormones .
+
+dpv:PaymentCard
+    a               owl:Class ;
+    rdfs:subClassOf dpv:FinancialAccount .
+
+:UA
+    a               owl:Class ;
+    rdfs:label      "Uric Acid" ;
+    rdfs:subClassOf :Kidney .
+
+dpv:CreditWorthiness
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Credit .
+
+dpv:BrowsingBehavior
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Behavioral .
+
+dpv:Analyse
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Use .
+
+:EGFR
+    a               owl:Class ;
+    rdfs:label      "Estimated Glomerular Filtration Rate" ;
+    rdfs:subClassOf :Kidney .
+
+:Vitamins
+    a               owl:Class ;
+    rdfs:label      "Vitamins" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:FinancialAccountNumber
+    a               owl:Class ;
+    rdfs:subClassOf dpv:AccountIdentifier .
+
+dpv:Acquire
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Obtain .
+
+:CREAT
+    a               owl:Class ;
+    rdfs:label      "Creatinine" ;
+    rdfs:subClassOf :Kidney .
+
+dpv:BrowsingReferral
+    a               owl:Class ;
+    rdfs:subClassOf dpv:BrowsingBehavior .
+
+:HSCRP
+    a               owl:Class ;
+    rdfs:label      "High-sensitivity CRP" ;
+    rdfs:subClassOf :Cardiac .
+
+dpv:Intention
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Preference .
+
+dpv:Dialect
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Language .
+
+dpv:DataController
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalEntity .
+
+:Lipids
+    a               owl:Class ;
+    rdfs:label      "Lipids" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:PrivacyPreference
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Preference .
+
+dpv:Identifying
+    a               owl:Class ;
+    rdfs:subClassOf dpv:External .
+
+dpv:Transactional
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Financial .
+
+dpv-gdpr:A6-1-e
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+:CA
+    a               owl:Class ;
+    rdfs:label      "Total Calcium" ;
+    rdfs:subClassOf :Minerals_Electrolytes .
+
+:HDL
+    a               owl:Class ;
+    rdfs:label      "High-Density Lipoprotein Cholesterol" ;
+    rdfs:subClassOf :Lipids .
+
+dpv:Income
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transactional .
+
+dpv:Tattoo
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PhysicalCharacteristic .
+
+dpv:AccountIdentifier
+    a               owl:Class ;
+    rdfs:subClassOf dpv:FinancialAccount .
+
+:CL
+    a               owl:Class ;
+    rdfs:label      "Chloride" ;
+    rdfs:subClassOf :Minerals_Electrolytes .
+
+dpv:PhysicalTrait
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Demographic .
+
+dpv:Communication
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Social .
+
+dpv:Derive
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transform .
+
+dpv:IdentityVerification
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Security .
+
+dpv:Fingerprint
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Biometric .
+
+:ALP
+    a               owl:Class ;
+    rdfs:label      "Alkaline Phosphatase" ;
+    rdfs:subClassOf :Liver .
+
+:TP
+    a               owl:Class ;
+    rdfs:label      "Total Protein" ;
+    rdfs:subClassOf :Proteins .
+
+:IDBIL
+    a               owl:Class ;
+    rdfs:label      "Indirect Bilirubin" ;
+    rdfs:subClassOf :Liver .
+
+dpv:Tracking
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PersonalDataCategory .
+
+dpv:RegistrationAuthentication
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServiceProvision .
+
+dpv:Reference
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+:Minerals_Electrolytes
+    a               owl:Class ;
+    rdfs:label      "Minerals/Electrolytes" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:BankAccount
+    a               owl:Class ;
+    rdfs:subClassOf dpv:FinancialAccount .
+
+dpv:Connection
+    a               owl:Class ;
+    rdfs:subClassOf dpv:SocialNetwork .
+
+dpv:LifeHistory
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Historical .
+
+:MCV
+    a               owl:Class ;
+    rdfs:label      "Mean Corpuscular Volume" ;
+    rdfs:subClassOf :CBC .
+
+dpv:Disclose
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Processing .
+
+dpv:Salary
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+dpv:PaymentCardExpiry
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PaymentCard .
+
+dpv:TVViewingBehavior
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServiceConsumptionBehavior .
+
+dpv:UserInterfacePersonalisation
+    a               owl:Class ;
+    rdfs:subClassOf dpv:ServicePersonalization .
+
+dpv:FamilyHealthHistory
+    a               owl:Class ;
+    rdfs:subClassOf dpv:HealthHistory .
+
+<http://w3id.org/wellfort/ns/dpv>
+    a owl:Ontology .
+
+dpv:PersonalisedAdvertising
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Advertising, dpv:ServicePersonalization .
+
+dpv-gdpr:A9-2-f
+    a               owl:Class ;
+    rdfs:subClassOf dpv:LegalBasis .
+
+dpv:VoiceCommunicationRecording
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Communication .
+
+dpv:Attitude
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Behavioral .
+
+dpv:ProfessionalCertification
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Professional .
+
+dpv:PersonalDataCategory
+    a owl:Class .
+
+dpv:LegalEntity
+    a owl:Class .
+
+dpv:PhilosophicalBelief
+    a               owl:Class ;
+    rdfs:subClassOf dpv:SpecialCategoryPersonalData, dpv:KnowledgeBelief .
+
+:FT4
+    a               owl:Class ;
+    rdfs:label      "Free Thyroxine" ;
+    rdfs:subClassOf :Thyroid .
+
+dpv:Combine
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Transform .
+
+dpv:LegalBasis
+    a owl:Class .
+
+:Proteins
+    a               owl:Class ;
+    rdfs:label      "Proteins" ;
+    rdfs:subClassOf dpv:HealthRecord .
+
+dpv:OfficialID
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Identifying .
+
+dpv:PhysicalHealth
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Health .
+
+dpv:SkinTone
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PhysicalCharacteristic .
+
+dpv:DerivedPersonalData
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PersonalDataCategory .
+
+dpv:FamilyStructure
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Family .
+
+dpv:Financial
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PersonalDataCategory .
+
+dpv:ImproveExistingProductsAndServices
+    a               owl:Class ;
+    rdfs:subClassOf dpv:OptimisationForController .
+
+dpv:EthnicOrigin
+    a               owl:Class ;
+    rdfs:subClassOf dpv:SpecialCategoryPersonalData, dpv:Ethnicity .
+
+dpv:Favorite
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Preference .
+
+dpv:Like
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Interest .
+
+:TSH
+    a               owl:Class ;
+    rdfs:label      "Thyroid-Stimulating Hormone" ;
+    rdfs:subClassOf :Thyroid .
+
+dct:modified
+    a owl:AnnotationProperty .
+
+dpv:Friend
+    a               owl:Class ;
+    rdfs:subClassOf dpv:SocialNetwork .
+
+dpv:Piercing
+    a               owl:Class ;
+    rdfs:subClassOf dpv:PhysicalCharacteristic .
+
+:BASO
+    a               owl:Class ;
+    rdfs:label      "Basophils" ;
+    rdfs:subClassOf :CBC .
+
+dpv:Country
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Location .
+
+dpv:Family
+    a               owl:Class ;
+    rdfs:subClassOf dpv:Social .
+
+dpv:Disability
+    a               owl:Class ;
+    rdfs:subClassOf dpv:MedicalHealth .
